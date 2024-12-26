@@ -143,7 +143,8 @@
     iframe.src = "";
     var currentUrl = document.location.href;
     if (currentUrl!=pwaUrl && !authPage){
-    var authPage = pwaUrl + '?auth=true&redirect=' + encodeURIComponent(currentUrl);
+    // var authPage = pwaUrl + '?auth=true&redirect=' + encodeURIComponent(currentUrl);
+    var authPage = pwaUrl + '?auth=true';
     console.log("authPage: " + authPage);
 //    window.open(authPage, '_self');
     window.location.href = authPage; // Redirect to the auth page
