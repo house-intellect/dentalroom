@@ -124,7 +124,8 @@
       // Hide auth prompt overlay
       document.getElementById('loading').style.display = 'none';
       iframe.style = "border: none !important;";
-      
+      if (iframe.src != pwaUrl) iframe.src = pwaUrl;
+
       done = true;
       clearInterval(authChecker);
       console.log(`authed successfully!`);
