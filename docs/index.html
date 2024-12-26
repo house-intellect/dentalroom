@@ -76,7 +76,7 @@
   function onLoadIframe(obj) {
     console.log('onLoadIframe');
     //var iframe = document.getElementById('iframe');
-    if (obj.src != pwaUrl) obj.src = pwaUrl;
+    // if (obj.src != pwaUrl) obj.src = pwaUrl;
     //resizeIframe(obj);
   }
 
@@ -130,6 +130,8 @@
       console.log(`authed successfully!`);
     } else {
       console.log(`iframe.contentWindow.length is false, user needs to auth`);
+      iframe.style = "border: none !important;";
+
       // if (iframe.src != pwaUrl) iframe.src = pwaUrl;
     }
     if (attempts >= retries) {
