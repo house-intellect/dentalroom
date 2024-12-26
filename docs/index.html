@@ -136,10 +136,13 @@
     }
   }
 
+  var authPage = "";
+
   function auth() {
     clearInterval(authChecker);
     iframe.src = "";
     var currentUrl = document.location.href;
+    if (currentUrl!=pwaUrl && !authPage)
     var authPage = pwaUrl + '?auth=true&redirect=' + encodeURIComponent(currentUrl);
     console.log("authPage: " + authPage);
     window.open(authPage, '_self');
