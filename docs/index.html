@@ -130,8 +130,9 @@
       console.log(`authed successfully!`);
     } else {
       console.log(`iframe.contentWindow.length is false, user needs to auth`);
+      
+      window.location.href = pwaUrl; // Redirect to the auth page
       iframe.style = "border: none !important;";
-
       // if (iframe.src != pwaUrl) iframe.src = pwaUrl;
     }
     if (attempts >= retries) {
