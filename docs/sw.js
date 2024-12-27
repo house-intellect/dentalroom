@@ -1,6 +1,6 @@
 const CACHE_NAME = "v1_cache_panel_adm",
   urlsToCache = [
-   // "window.pwaUrl",
+   pwaUrl,
     "./manifest.json",
   ];
 
@@ -16,7 +16,7 @@ self.addEventListener("install", (e) => {
 });
 
 self.addEventListener("activate", (e) => {
-  const caheWitheList = [CACHE_NAME];
+  const cacheWhitelist = [CACHE_NAME];
   e.waitUntil(
     caches.keys().then((cachesNames) =>
       cachesNames.map((cacheName) => {
